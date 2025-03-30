@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+    Project...
+{% endblock title%}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'projects/css/project.css' %}">
+{% endblock css %}
+
+{% block body %}
+    <a href="{% url 'projects' %}">Go back</a>
+    <div>
+        {% comment %}
+            Este es un comentario multi linea
+        {% endcomment %}
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.description }}</p>
+    </div>
+{% endblock body%}

@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+    Projects...
+{% endblock title%}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'projects/css/projects.css' %}">
+{% endblock css %}
+
+{% block body %}
+  {% for project in projects %}
+    {% include "projects/fragments/card.html" %}
+  {% empty %}
+    <h1>No projects</h1>
+  {% endfor %}
+{% endblock body%}

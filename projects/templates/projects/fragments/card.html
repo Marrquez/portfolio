@@ -1,0 +1,7 @@
+<div class="card">
+    {# this is a single commend #}
+    <a href="{% url 'project' project.id %}">
+        <h1>{{ forloop.counter }} - {{ project.title|capfirst }}</h1>
+    </a>
+    <p>{{ project.description|truncatewords:6 }}</p>
+</div>

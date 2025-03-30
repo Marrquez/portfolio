@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock title%}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block css %}{% endblock css %}
+</head>
+<body>
+    <nav>
+        {% for item in menuItems %}
+            <a href="{% url item.path %}">{{item.name}}</a>
+        {% endfor %}
+    </nav>
+
+    {% block body %}
+    {% endblock body%}
+
+    <footer>
+        This is the footer...
+    </footer>
+</body>
+</html>
