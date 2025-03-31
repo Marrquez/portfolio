@@ -1,0 +1,10 @@
+<nav class="nav-bar">
+    <div class="nav-bar__content">
+        <a class="nav-bar__logo">Logo</a>
+        <div class="nav-bar__items">
+            {% for item in menuItems %}
+                <a href="{% url item.path %}">{{ item.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</nav>

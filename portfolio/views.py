@@ -12,6 +12,10 @@ def default(request, path):
     url = reverse('test', args=[path])
     return HttpResponseRedirect(url)
 
+def index(request):
+    url = reverse('home')
+    return HttpResponseRedirect(url)
+
 def test(request, name=''):
     colors = ['red', 'blue', 'pink']
     context = {'name': name, 'colors': colors}

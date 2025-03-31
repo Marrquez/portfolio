@@ -3,9 +3,28 @@
 {% load static %}
 
 {% block title %}
-    Home page...
+    About me
 {% endblock title%}
 
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock css %}
+
 {% block body %}
-    <h1>Hola Este es el home</h1>
+    <div class="home">
+        <section>
+            <h1 class="home__title">Cristian <br /> Olaya Marquez</h1>
+            <p class="home__legend">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla magni cum, fugit ipsa modi totam aliquid perferendis beatae dignissimos non autem a, quia rerum dolore id voluptatibus, voluptate quis ipsam.</p>
+            <div class="home__social">
+                <ul>
+                    <li>L</li>
+                    <li>@</li>
+                    <li>G</li>
+                </ul>
+            </div>
+        </section>
+        <section class="home__portrait">
+            <img src="{% static 'img/fat_ed.png' %}" alt="Picture of myself."/>
+        </section>
+    </div>
 {% endblock body%}

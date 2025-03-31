@@ -10,17 +10,14 @@
     {% block css %}{% endblock css %}
 </head>
 <body>
-    <nav>
-        {% for item in menuItems %}
-            <a href="{% url item.path %}">{{item.name}}</a>
-        {% endfor %}
-    </nav>
+    <div class="main-content">
+        {% include "./partials/menu.html" %}
 
-    {% block body %}
-    {% endblock body%}
-
-    <footer>
-        This is the footer...
-    </footer>
+        <div class="main-content__body">
+            {% block body %}{% endblock body%}
+        </div>
+    
+        {% include "./partials/footer.html" %}
+    </div>
 </body>
 </html>
