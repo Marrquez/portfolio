@@ -13,9 +13,7 @@
     <div class="main-content">
         {% include "./partials/menu.html" %}
 
-        <div class="main-content__body">
-            {% block body %}{% endblock body%}
-        </div>
+        {% block body %}{% endblock body%}
     
         {% include "./partials/footer.html" %}
     </div>

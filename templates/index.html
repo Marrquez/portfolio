@@ -1,6 +1,7 @@
 {% extends "./layouts/base.html" %}
 
 {% load static %}
+{% load bootstrap_icons %}
 
 {% block title %}
     About me
@@ -14,17 +15,40 @@
     <div class="home">
         <section>
             <h1 class="home__title">Cristian <br /> Olaya Marquez</h1>
-            <p class="home__legend">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla magni cum, fugit ipsa modi totam aliquid perferendis beatae dignissimos non autem a, quia rerum dolore id voluptatibus, voluptate quis ipsam.</p>
+            <p class="home__legend">
+                Software Engineer and Business Information Technologies Master Degree. I am 35 years old, living in Gdańsk, Poland. EN/ES speaker and Polish language learner.
+            </p>
+            <p class="home__legend">Honest, committed, responsible and dedicated person, I am an excellent team player and easy going person.</p>
             <div class="home__social">
                 <ul>
-                    <li>L</li>
-                    <li>@</li>
-                    <li>G</li>
+                    <li><a href="" target="_blank">{% bs_icon 'linkedin' size='1.5em' %}</a></li>
+                    <li><a href="" target="_blank">{% bs_icon 'envelope' size='1.5em' %}</a></li>
+                    <li><a href="" target="_blank">{% bs_icon 'github' size='1.5em' %}</a></li>
                 </ul>
             </div>
         </section>
         <section class="home__portrait">
             <img src="{% static 'img/fat_ed.png' %}" alt="Picture of myself."/>
         </section>
+    </div>
+    <div class="projects">
+        <h5><label>Some of my latest work</label></h5>
+        <div class="projects__wrapper">
+            <a class="project">
+                <img />
+                <label>My personal WebSite</label>
+                <span>Python / Django</span>
+            </a>
+            <a class="project">
+                <img />
+                <label>Gratini: Sudoku Online</label>
+                <span>Python / Django</span>
+            </a>
+            <a class="project">
+                <img />
+                <label>Sklepy</label>
+                <span>TypeScript / Angular / Firebase</span>
+            </a>
+        </div>
     </div>
 {% endblock body%}

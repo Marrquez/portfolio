@@ -1,8 +1,8 @@
 .home {
     display: flex;
     justify-content: space-between;
-    padding: 32px 0;
-    width: 100%;
+    padding: 32px 24px;
+    width: 65vw;
 }
 
 .home__title {
@@ -10,6 +10,7 @@
 }
 
 .home__legend {
+    color: var(--color-text-primary);
     padding: 8px 0 ;
     max-width: 400px;
 }
@@ -25,18 +26,94 @@
 }
 
 .home__social ul li {
-    border: 1px solid var(--color-background-light);
+    cursor: pointer;
     height: 40px;
     margin: 8px;
     padding: 8px;
     width: 40px;
 }
 
+.home__social ul li a:visited {
+    color: var(--color-text-primary-dark);
+}
+
+.home__social ul li a:hover {
+    color: var(--color-text-secondary);
+}
+
 .home__portrait {
+    align-items: center;
     display: flex;
 }
 
 .home__portrait img {
-    border-radius: 20px;
+    border-radius: 8px;
+    height: 200px;
+    width: 277px;
+}
+
+.projects {
+    align-items: center;
+    background-color: var(--color-background-primary);
+    border-top: 2px solid var(--color-line);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 64px;
+    width: 100%;
+}
+
+.projects h5 {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 65vw;
+}
+
+.projects h5 label {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    display: block;
+    padding: 0 20px;
     width: 220px;
+}
+
+.projects h5 > * {
+    position: relative;
+    z-index: 2;
+}
+.projects h5::before {
+    background-color: var(--color-line);
+    bottom: 0;
+    content: " ";
+    height: 1px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.projects__wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65vw;
+}
+
+.project {
+    background-color: var(--color-background);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 8px;
+    transform: translate3d(0px, 2.5%, 0px);
+    width: 200px;
+}
+
+.project:hover {
+    transform: translate3d(0px, 0%, 0px);
 }

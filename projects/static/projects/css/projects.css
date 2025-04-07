@@ -1,0 +1,67 @@
+.projects {
+    align-items: center;
+    background-color: var(--color-background-primary);
+    border-top: 2px solid var(--color-line);
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0 64px;
+    width: 100%;
+}
+
+.projects h5 {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 65vw;
+}
+
+.projects h5 label {
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    display: block;
+    padding: 0 20px;
+    width: 220px;
+}
+
+.projects h5 > * {
+    position: relative;
+    z-index: 2;
+}
+.projects h5::before {
+    background-color: var(--color-line);
+    bottom: 0;
+    content: " ";
+    height: 1px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.projects__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 65vw;
+}
+
+.card {
+    background-color: var(--color-background);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    margin: 10px;
+    padding: 8px;
+    transform: translate3d(0px, 2.5%, 0px);
+    width: 200px;
+}
+
+.card:hover {
+    transform: translate3d(0px, 0%, 0px);
+}

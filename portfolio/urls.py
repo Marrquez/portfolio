@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('home/', views.home, name='home'),
     path('projects/', include('projects.urls')),
+    path('post/', include('post.urls')),
     path('<int:id>/', projects_views.default),
     path('<str:path>/', views.default),
     path('test/', views.test, name='test'),

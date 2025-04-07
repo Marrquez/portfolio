@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %}
+    Queries...
+{% endblock title%}
+
+{% block body %}
+    <h1>A single author</h1>
+    <p>in this case, as i didn't specify which fiel i am gonna render, it take the value returned in the constructor function __str__</p>
+    <span>Single author: {{ singleAuthor|truncatewords:5 }}</span>
+
+    <h1>todos los authors</h1>
+    <ul>
+        {% for author in authors %}
+            <li>{{ author.id }}. {{ author.name|truncatewords:5 }} - {{ author.email  }}</li>
+        {% endfor%}
+    </ul>
+    <h3> Total authors: {{ authors|length }} </h3>
+    <h3> Authors filtered by email</h3>
+
+    <ul>
+        {% for fauth in filteredAuths %}
+            <li>{{ fauth.id }}. {{ fauth.name|truncatewords:5 }} - {{ fauth.email  }}</li>
+        {% endfor%}
+    </ul>
+
+{% endblock body %}

@@ -13,6 +13,26 @@ pjcs = [
         'title': 'sklepy web site',
         'description': 'this is a desc 2, another project'
     },
+    {
+        'id': 3,
+        'title': 'sklepy web site',
+        'description': 'this is a desc 2, another project'
+    },
+    {
+        'id': 4,
+        'title': 'sklepy web site',
+        'description': 'this is a desc 2, another project'
+    },
+    {
+        'id': 5,
+        'title': 'sklepy web site',
+        'description': 'this is a desc 2, another project'
+    },
+    {
+        'id': 6,
+        'title': 'sklepy web site',
+        'description': 'this is a desc 2, another project'
+    },
 ]
 
 # Create your views here.

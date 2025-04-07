@@ -10,9 +10,12 @@
 {% endblock css %}
 
 {% block body %}
-  {% for project in projects %}
-    {% include "projects/fragments/card.html" %}
-  {% empty %}
-    <h1>No projects</h1>
-  {% endfor %}
+<div class="projects">
+  <h5><label>Some of my latest work</label></h5>
+  <div class="projects__wrapper">
+    {% for project in projects %}
+      {% include "projects/fragments/card.html" %}
+    {% endfor %}
+  </div>
+</div>
 {% endblock body%}
